@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christian's Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="navigation">
+			<ul>
+				<li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+				<li><a href="#about" onclick="toggleMenu();">About</a></li>
+				<li><a href="#services" onclick="toggleMenu();">Projects</a></li>
+				
+			</ul>
+			<div class="themeSwitch"></div>
+		</div>
+		<div class="main">
+			<div class="topbar">
+				<a href="#" class="logo">Portfolio</a>
+				<div class="toggle">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</div>
+			</div>
+
+			<!-- banner -->
+			<section class="banner" id="banner">
+				<div class="content">
+					<div class="imgBx">
+						<img src="portrait.jpg">
+					</div>
+					<h3 data-text="Christian Palmer">Christian Palmer</h3>
+					<p>Front End Developer</p>
+					<a href="#" class="btn">palmerchristian53@gmail.com</a>
+					<ul class="socialMedia">
+						<li><a href="#"><i class="fab fa-react" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fab fa-node" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fab fa-html5" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fab fa-css3-alt" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fab fa-js-square" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- About -->
+			<div class="about" id="about">
+				<div class="title">
+					<h2>About Me</h2>
+				</div>
+				<div class="content">
+					<div class="textBox">
+						<p>Self-taught front end web developer. 12 year Navy veteran. As an autonomous learner, I'm committed to my vocation and will continue cultivating and adapting to stay on the cutting edge. <br><br>Proficient in contemporary front end technologies to include JS, ReactJS, NodeJS, HTML, and CSS. <br><br>Seeking opportunities that focus on front end development.   </p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Services -->
+			
+			<!-- Projects -->
+			<section class="project adjust" id="project">
+				<div class="title">
+					<h2>Projects</h2>
+					<p>A few projects I've completed as tools for learning.</p>
+				</div>
+				<div class="content">
+					<div class="workBx">
+						<div class="imgBx">
+							<img src="Proj1.png">
+						</div>
+						<div class="textBx">
+							<h3>My Thoughts</h3>
+							<p>A simple ReactJS crud app to record musings.</p>
+						</div>
+					</div>
+					<div class="workBx">
+						<div class="imgBx">
+							<img src="Proj4.png">
+						</div>
+						<div class="textBx">
+							<h3>Fashnews</h3>
+							<p>Landing page with vanilla JS</p>
+						</div>
+					</div>
+					<div class="workBx">
+						<div class="imgBx">
+							<img src="Proj3.png">
+						</div>
+						<div class="textBx">
+							<h3>GifGen</h3>
+							<p>Fetch GIFS from GIPHY's API</p>
+						</div>
+					</div>
+					<div class="workBx">
+						<div class="imgBx">
+							<img src="Proj5.png">
+						</div>
+						<div class="textBx">
+							<h3>Album</h3>
+							<p>Minimalistic photo album with ReactJS, Firebase and Framer Motion</p>
+						</div>
+					</div>
+					<div class="workBx">
+						<div class="imgBx">
+							<img src="Proj6.png">
+						</div>
+						<div class="textBx">
+							<h3>They Said What?</h3>
+							<p>Foreign movie subtitle game using ReactJS</p>
+						</div>
+					</div>
+					<div class="workBx">
+						<div class="imgBx">
+							<img src="chat.png">
+						</div>
+						<div class="textBx">
+							<h3>Chatty</h3>
+							<p>ReactJS chat app with chat-engine io</p>
+						</div>
+					</div>
+					
+					</div>
+				</div>
+			</section>
+
+		
+		
+		
+
+		</div>
+	</div>
+
+	
+	<script>
+		let toggle = document.querySelector('.toggle');
+		let topbar = document.querySelector('.topbar');
+		let navigation = document.querySelector('.navigation');
+		let main = document.querySelector('.main');
+		let themeSwitch = document.querySelector('.themeSwitch');
+		let body = document.querySelector('body')
+		toggle.onclick = function(){
+			toggle.classList.toggle('active');
+			topbar.classList.toggle('active');
+			navigation.classList.toggle('active');
+			main.classList.toggle('active');
+		}
+
+		// theme switch toggle
+		themeSwitch.onclick = function(){
+			body.classList.toggle('dark')
+		}
+
+
+		
+		function toggleMenu(){
+			let navigation = document.querySelector('.navigation');
+			let main = document.querySelector('.main');
+			navigation.classList.remove('active');
+			main.classList.remove('active');
+		}
+	</script>
+</body>
+</html>
